@@ -23,7 +23,6 @@ body {
 .row {
     height: 50%;
     width: 100%;
-    border-radius: 5px;
 
 }
 
@@ -35,8 +34,6 @@ body {
     border-radius: 50%;
 
     background-color: indigo;
-
-    cursor: pointer;
 
     -webkit-transition: background-color, 0.5s;
     -moz-transition: background-color, 0.5s;
