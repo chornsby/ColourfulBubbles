@@ -1,0 +1,60 @@
+body {
+    font-family: Calibri, sans-serif;
+}
+
+#intro {
+    text-align: center;
+}
+
+#tiles-board {
+    clear: both;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.row {
+    height: 50%;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.tile {
+    float: left;
+    height: 100%;
+    width: 50%;
+
+    border-radius: 50%;
+
+    background-color: indigo;
+
+    cursor: pointer;
+
+    -webkit-transition: background-color, 0.5s;
+    -moz-transition: background-color, 0.5s;
+    -ms-transition: background-color, 0.5s;
+    -o-transition: background-color, 0.5s;
+    transition: background-color, 0.5s;
+}
+
+/*.tile:hover {*/
+    /*background-color: orange;*/
+/*}*/
+
+.old-tile {
+    float: left;
+    height: 100%;
+    width: 50%;
+
+    border-radius: 50%;
+
+    background-color: white;
+}
