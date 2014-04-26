@@ -6,46 +6,44 @@ Array.prototype.random = function() {
     return this[index];
 };
 
-var bubbles = function($tile) {
+var bubbles = function($bubble) {
 
-    if($tile.parents().length > 14) {
-        $tile.removeClass('tile');
-        $tile.addClass('old-tile');
-        $tile.css('background-color', 'white');
+    if($bubble.parents().length > 14) {
+        $bubble.removeClass('bubble');
+        $bubble.addClass('old-bubble');
+        $bubble.css('background-color', 'white');
         return;
     }
 
-    var newTiles = '<div class="container"><div class="row"><div class="tile"></div><div class="tile"></div></div><div class="row"><div class="tile"></div><div class="tile"></div></div></div>';
+    var newBubbles = '<div class="full-container"><div class="bubbles-row"><div class="bubble"></div><div class="bubble"></div></div><div class="bubbles-row"><div class="bubble"></div><div class="bubble"></div></div></div>';
 
 //    $tile.append(newTiles).fadeIn(300);
-    var $newTiles = $(newTiles);
+    var $newBubbles = $(newBubbles);
 
-    $newTiles.find('.tile').each(function() {
+    $newBubbles.find('.bubble').each(function() {
         $(this).css('background-color', colours.random())
     });
 
-    $newTiles.appendTo($tile);
+    $newBubbles.appendTo($bubble);
 
-    $tile.removeClass('tile');
-    $tile.addClass('old-tile');
-
-
+    $bubble.removeClass('bubble');
+    $bubble.addClass('old-bubble');
 };
 
 $(document).ready(function() {
 
-    var $tilesBoard = $('#tiles-board');
+    var bubblesBoard = $('#bubbles-board');
 
     /* Give initial colours. */
-    $('.tile').each(function() {
+    $('.bubble').each(function() {
         $(this).css('background-color', colours.random());
     });
 
-    $tilesBoard.on('mouseenter', '.tile', function() {
+    bubblesBoard.on('mouseenter', '.bubble', function() {
         bubbles($(this));
     });
 
-    $tilesBoard.on('click', '.tile', function() {
+    bubblesBoard.on('click', '.bubble', function() {
         bubbles($(this));
     })
 });

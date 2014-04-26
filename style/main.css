@@ -6,27 +6,27 @@ body {
     text-align: center;
 }
 
-#tiles-board {
+#bubbles-board {
     clear: both;
     margin: auto;
     width: 500px;
     height: 500px;
     border-radius: 5px;
+    background-color: white;
 }
 
-.container {
+.full-container {
     height: 100%;
     width: 100%;
     background-color: white;
 }
 
-.row {
+.bubbles-row {
     height: 50%;
     width: 100%;
-
 }
 
-.tile {
+.bubble {
     float: left;
     height: 100%;
     width: 50%;
@@ -46,7 +46,7 @@ body {
     /*background-color: orange;*/
 /*}*/
 
-.old-tile {
+.old-bubble {
     float: left;
     height: 100%;
     width: 50%;
